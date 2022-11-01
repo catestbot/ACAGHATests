@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - 'creationTestApp/**'
+    - 'updateTestApp/**'
     - '.github/workflows/ghaapp-northcentralusstage-AutoDeployTrigger-091b936c-3a8a-487d-bbb6-48586c4c65f5.yml'
 
   # Allow mannually trigger 
@@ -36,8 +36,8 @@ jobs:
         with:
           push: true
           tags: catestbot/ghaapp-northcentralusstage:${{ github.sha }}
-          file: creationTestApp/Dockerfile
-          context: creationTestApp/
+          file: updateTestApp/Dockerfile
+          context: updateTestApp/
 
 
   deploy:
